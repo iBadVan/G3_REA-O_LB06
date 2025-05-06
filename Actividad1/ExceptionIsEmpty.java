@@ -1,5 +1,6 @@
-package Actividad1
+package Actividad1;
 
 public class ExceptionIsEmpty {
+
 
 }
