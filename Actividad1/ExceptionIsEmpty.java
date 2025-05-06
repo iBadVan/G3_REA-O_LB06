@@ -1,6 +1,10 @@
 package Actividad1;
 
-public class ExceptionIsEmpty {
-
-
+public class ExceptionIsEmpty extends Exception {
+    public ExceptionIsEmpty(String mensaje) {
+        super(mensaje);
+    }
+    public ExceptionIsEmpty() {
+        super("La pila está vacía.");
+    }
 }
