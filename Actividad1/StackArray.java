@@ -7,7 +7,17 @@ public class StackArray <E> implements Stack<E> {
     public StackArray(int n){
         this.array=(E[])new Object[n];
         tope=-1;
+    }
 
+    @Override
+    public void push(E x) {
+        if (tope == array.length - 1) {
+            throw new RuntimeException();
+        }
+        array[++tope] = x;
     }
     
+    
+
+
 }
