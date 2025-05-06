@@ -41,6 +41,16 @@ public class StackArray <E> implements Stack<E> {
         return tope == array.length - 1;
     }
 
-    
+    @Override
+    public String toString() {
+        if (isEmpty()) return "Pila vacía";
+        
+        StringBuilder sb = new StringBuilder();
+        for (int i = tope; i >= 0; i--) {
+            sb.append(array[i]);
+            if (i != 0) sb.append(" -> ");
+        }
+        return sb.toString();
+    }
 
 }
