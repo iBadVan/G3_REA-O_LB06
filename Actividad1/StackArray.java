@@ -33,6 +33,14 @@ public class StackArray <E> implements Stack<E> {
         return array[tope];
     }
     
+    public boolean isEmpty() {
+        return this.tope == -1;
+    }
 
+    public boolean isFull() {
+        return tope == array.length - 1;
+    }
+
+    
 
 }
