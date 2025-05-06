@@ -17,6 +17,21 @@ public class StackArray <E> implements Stack<E> {
         array[++tope] = x;
     }
     
+    @Override
+    public E pop() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty();
+        }
+        return array[tope--];
+    }
+
+    @Override
+    public E top() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty();
+        }
+        return array[tope];
+    }
     
 
 
