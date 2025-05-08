@@ -1,5 +1,5 @@
 package Ejercicio1;
-
+import Actividad1.Stack;
 import Actividad1.ExceptionIsEmpty;
 
 public class Test {
@@ -19,7 +19,23 @@ public class Test {
         }
 
         System.out.println(" ");
-        
+
+        Stack<String> pilaStrings = new StackLink<>();
+        System.out.println("PILA DE STRINGS (LISTA ENLAZADA):");
+        try {
+            pilaStrings.push("Primero");
+            pilaStrings.push("Segundo");
+            pilaStrings.push("Tercero");
+            System.out.println("Contenido: " + pilaStrings);
+            System.out.println("Top: " + pilaStrings.top());
+            pilaStrings.pop();
+            pilaStrings.pop();
+            pilaStrings.pop();
+            System.out.println("¿Está vacía?: " + pilaStrings.isEmpty());
+            pilaStrings.pop();  
+        } catch (ExceptionIsEmpty e) {
+            System.err.println("Excepción capturada: " + e.getMessage());
+        }
 
     }
 }
