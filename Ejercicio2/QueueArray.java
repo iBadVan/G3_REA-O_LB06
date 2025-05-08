@@ -58,5 +58,18 @@ public class QueueArray<E> implements Queue<E> {
     public boolean isEmpty() {
         return size == 0;
     }
+
+    @Override
+    public String toString() {
+        if (isEmpty()) return "Cola vacía";
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < size; i++) {
+            int index = (first + i) % capacity;
+            sb.append(array[index]);
+            if (i != size - 1) sb.append(" -> ");
+        }
+        return sb.toString();
+    }
     
 }   
