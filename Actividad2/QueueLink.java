@@ -35,6 +35,14 @@ public class QueueLink<E> implements Queue<E> {
         return data;
     }
 
+    @Override
+    public E front() throws ExceptionIsEmpty {
+        if (this.isEmpty()) {
+            throw new ExceptionIsEmpty();
+        }
+        return this.first.getData();
+    }
+
     
         
 }
