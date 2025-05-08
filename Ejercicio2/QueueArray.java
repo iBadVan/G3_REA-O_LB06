@@ -54,6 +54,9 @@ public class QueueArray<E> implements Queue<E> {
         return array[last];
     }
 
-    
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
     
 }   
