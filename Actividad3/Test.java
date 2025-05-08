@@ -25,7 +25,25 @@ public class Test {
         } catch (ExceptionIsEmpty e) {
             System.err.println("Error: " + e.getMessage());
         }
-        
+
+        System.out.println(" ");
+
+        // Cola de prioridad con datos Double y prioridad Double
+        PriorityQueue<Double, Double> colaNumeros = new PriorityQueueLinkSort<>();
+
+        System.out.println("== COLA DE PRIORIDAD: NÚMEROS ==");
+
+        try {
+            colaNumeros.enqueue(1.1, 0.5);
+            colaNumeros.enqueue(2.2, 2.0);
+            colaNumeros.enqueue(3.3, 1.0);
+
+            System.out.println("Contenido: " + colaNumeros);
+            System.out.println("Front: " + colaNumeros.front());
+            System.out.println("Back: " + colaNumeros.back());
+        } catch (ExceptionIsEmpty e) {
+            System.err.println("Error: " + e.getMessage());
+        }
     }
 
 }
