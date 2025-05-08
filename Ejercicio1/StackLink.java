@@ -1,5 +1,6 @@
 package Ejercicio1;
 
+import Actividad1.ExceptionIsEmpty;
 import Actividad1.Stack;
 
 public class StackLink<E> implements Stack<E>{
@@ -14,6 +15,16 @@ public class StackLink<E> implements Stack<E>{
         Node<E> newNode = new Node<>(x);
         newNode.setNext(top);
         top = newNode;
+    }
+
+    @Override
+    public E pop() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("La pila está vacía");
+        }
+        E data = top.getData();
+        top = top.getNext();
+        return data;
     }
 
     
