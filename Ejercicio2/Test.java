@@ -19,6 +19,25 @@ public class Test {
         } catch (ExceptionIsEmpty e) {
             System.err.println("Error: " + e.getMessage());
         }
-        
+
+        System.out.println(" ");
+
+        Queue<String> colaStrings = new QueueArray<>(3);
+        System.out.println("== COLA DE STRINGS (ARREGLO) ==");
+        try {
+            colaStrings.enqueue("Uno");
+            colaStrings.enqueue("Dos");
+            colaStrings.enqueue("Tres");
+            System.out.println("Contenido: " + colaStrings);
+            System.out.println("Front: " + colaStrings.front());
+            colaStrings.dequeue();
+            System.out.println("Después de dequeue: " + colaStrings);
+            colaStrings.enqueue("Cuatro"); 
+            System.out.println("Después de insertar 'Cuatro': " + colaStrings);
+        } catch (ExceptionIsEmpty e) {
+            System.err.println("Excepción capturada: " + e.getMessage());
+        } catch (RuntimeException e) {
+            System.err.println("Excepción de ejecución: " + e.getMessage());
+        }
     }
 }
