@@ -64,5 +64,12 @@ public class PriorityQueueLinked<E> implements PriorityQueue<E, Integer> {
         return true;
     }
 
-    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Cola de prioridad:\n");
+        for (int i = 0; i < levels; i++) {
+            sb.append("Prioridad ").append(i).append(": ").append(queues[i].toString()).append("\n");
+        }
+        return sb.toString();
+    }
 }
