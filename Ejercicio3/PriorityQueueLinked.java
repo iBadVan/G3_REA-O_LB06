@@ -15,5 +15,11 @@ public class PriorityQueueLinked<E> implements PriorityQueue<E, Integer> {
         }
     }
     
-    
+    @Override
+    public void enqueue(E x, Integer pr) {
+        if (pr < 0 || pr >= levels) {
+            throw new IllegalArgumentException("Prioridad fuera de rango");
+        }
+        queues[pr].enqueue(x);
+    }
 }
