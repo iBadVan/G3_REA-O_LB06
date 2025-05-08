@@ -1,5 +1,7 @@
 package Ejercicio2;
 
+import Actividad1.ExceptionIsEmpty;
+
 public class QueueArray<E> implements Queue<E> {
     private E[] array;
     private int first;
@@ -25,6 +27,15 @@ public class QueueArray<E> implements Queue<E> {
         size++;
     }
 
-    
+    @Override
+    public E dequeue() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("No se puede eliminar de una cola vacía");
+        }
+        E item = array[first];
+        first = (first + 1) % capacity;
+        size--;
+        return item;
+    }
     
 }   
