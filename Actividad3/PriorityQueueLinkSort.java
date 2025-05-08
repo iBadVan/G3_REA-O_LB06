@@ -75,4 +75,9 @@ public class PriorityQueueLinkSort <E, N extends Comparable<N>> implements Prior
         return first.getData().data;
     }
 
+    @Override
+    public boolean isEmpty() {
+        return first == null;
+    }
+
 }
