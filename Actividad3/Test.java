@@ -12,7 +12,7 @@ public class Test {
             colaMensajes.enqueue("Mensaje A", 2);
             colaMensajes.enqueue("Mensaje B", 5);
             colaMensajes.enqueue("Mensaje C", 3);
-            colaMensajes.enqueue("Mensaje D", 5); // misma prioridad que B
+            colaMensajes.enqueue("Mensaje D", 5); 
             colaMensajes.enqueue("Mensaje E", 1);
 
             System.out.println("Contenido: " + colaMensajes);
@@ -28,7 +28,6 @@ public class Test {
 
         System.out.println(" ");
 
-        // Cola de prioridad con datos Double y prioridad Double
         PriorityQueue<Double, Double> colaNumeros = new PriorityQueueLinkSort<>();
 
         System.out.println("== COLA DE PRIORIDAD: NÚMEROS ==");
