@@ -18,5 +18,24 @@ public class Test {
         } catch (ExceptionIsEmpty e) {
             System.err.println("Error: " + e.getMessage());
         }
+
+        System.out.println(" ");
+
+        // Cola de Strings
+        Queue<String> colaStrings = new QueueLink<>();
+        System.out.println("== COLA DE STRINGS ==");
+        try {
+            colaStrings.enqueue("Hola");
+            colaStrings.enqueue("Mundo");
+            System.out.println("Contenido: " + colaStrings);
+            System.out.println("Front: " + colaStrings.front());
+            colaStrings.dequeue();
+            System.out.println("Contenido tras dequeue: " + colaStrings);
+            colaStrings.dequeue();
+            System.out.println("¿Está vacía?: " + colaStrings.isEmpty());
+            colaStrings.dequeue();  
+        } catch (ExceptionIsEmpty e) {
+            System.err.println("Excepción capturada: " + e.getMessage());
+        }
     }
 }
