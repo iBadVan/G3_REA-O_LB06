@@ -1,11 +1,12 @@
 package Ejercicio2;
 
 import Actividad1.ExceptionIsEmpty;
+import Actividad2.Queue;
 
 public class Test {
     public static void main(String[] args) {
         Queue<Integer> colaEnteros = new QueueArray<>(5);
-        System.out.println("== COLA DE ENTEROS (ARREGLO) ==");
+        System.out.println("COLA DE ENTEROS (ARREGLO): ");
         try {
             colaEnteros.enqueue(10);
             colaEnteros.enqueue(20);
@@ -23,7 +24,7 @@ public class Test {
         System.out.println(" ");
 
         Queue<String> colaStrings = new QueueArray<>(3);
-        System.out.println("== COLA DE STRINGS (ARREGLO) ==");
+        System.out.println("COLA DE STRINGS (ARREGLO): ");
         try {
             colaStrings.enqueue("Uno");
             colaStrings.enqueue("Dos");
