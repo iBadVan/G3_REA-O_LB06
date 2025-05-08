@@ -50,5 +50,10 @@ public class QueueLink<E> implements Queue<E> {
         }
         return this.last.getData();
     }
+
+    @Override
+    public boolean isEmpty() {
+        return this.first == null;
+    }
         
 }
