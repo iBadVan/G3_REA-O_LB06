@@ -34,5 +34,15 @@ public class PriorityQueueLinked<E> implements PriorityQueue<E, Integer> {
         throw new ExceptionIsEmpty("Cola de prioridad vacía");
     }
 
+    @Override
+    public E front() throws ExceptionIsEmpty {
+        for (int i = 0; i < levels; i++) {
+            if (!queues[i].isEmpty()) {
+                return queues[i].front();
+            }
+        }
+        throw new ExceptionIsEmpty("Cola de prioridad vacía");
+    }
+
     
 }
