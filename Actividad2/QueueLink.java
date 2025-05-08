@@ -55,5 +55,21 @@ public class QueueLink<E> implements Queue<E> {
     public boolean isEmpty() {
         return this.first == null;
     }
+
+    @Override
+    public String toString() {
+        if (isEmpty()) return "Cola vacía";
+
+        StringBuilder sb = new StringBuilder();
+        Node<E> current = this.first;
+        while (current != null) {
+            sb.append(current.getData());
+            if (current.getNext() != null) {
+                sb.append(" -> ");
+            }
+            current = current.getNext();
+        }
+        return sb.toString();
+    }
         
 }
