@@ -59,6 +59,20 @@ public class PriorityQueueLinkSort <E, N extends Comparable<N>> implements Prior
         return aux;
     }
 
-    
+    @Override
+    public E back() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("Queue is empty");
+        }
+        return last.getData().data;
+    }
+
+    @Override
+    public E front() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("Queue is empty");
+        }
+        return first.getData().data;
+    }
 
 }
