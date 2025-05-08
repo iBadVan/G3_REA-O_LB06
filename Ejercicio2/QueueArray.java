@@ -15,6 +15,16 @@ public class QueueArray<E> implements Queue<E> {
         this.size = 0;
     }
 
+    @Override
+    public void enqueue(E x) {
+        if (size == capacity) {
+            throw new RuntimeException("La cola está llena.");
+        }
+        last = (last + 1) % capacity;
+        array[last] = x;
+        size++;
+    }
+
     
     
 }   
