@@ -1,6 +1,8 @@
 package Ejercicio2;
 
 import Actividad1.ExceptionIsEmpty;
+import Actividad2.Queue;
+
 
 public class QueueArray<E> implements Queue<E> {
     private E[] array;
