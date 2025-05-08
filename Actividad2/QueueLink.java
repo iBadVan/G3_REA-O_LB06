@@ -43,6 +43,12 @@ public class QueueLink<E> implements Queue<E> {
         return this.first.getData();
     }
 
-    
+    @Override
+    public E back() throws ExceptionIsEmpty {
+        if (this.isEmpty()) {
+            throw new ExceptionIsEmpty();
+        }
+        return this.last.getData();
+    }
         
 }
