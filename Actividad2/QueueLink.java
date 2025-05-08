@@ -1,5 +1,7 @@
 package Actividad2;
 
+import Actividad1.ExceptionIsEmpty;
+
 public class QueueLink<E> implements Queue<E> {
     private Node<E> first;
     private Node<E> last;
@@ -19,5 +21,20 @@ public class QueueLink<E> implements Queue<E> {
         }
         this.last = aux;
     }
+
+    @Override
+    public E dequeue() throws ExceptionIsEmpty {
+        if (this.isEmpty()) {
+            throw new ExceptionIsEmpty();
+        }
+        E data = this.first.getData();
+        this.first = this.first.getNext();
+        if (this.first == null) {
+            this.last = null;
+        }
+        return data;
+    }
+
+    
         
 }
