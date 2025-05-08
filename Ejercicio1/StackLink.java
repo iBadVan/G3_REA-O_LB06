@@ -8,5 +8,14 @@ public class StackLink<E> implements Stack<E>{
     public StackLink() {
         this.top = null;
     }
+
+    @Override
+    public void push(E x) {
+        Node<E> newNode = new Node<>(x);
+        newNode.setNext(top);
+        top = newNode;
+    }
+
+    
     
 }
