@@ -1,6 +1,7 @@
 package Ejercicio4;
 
 import Actividad1.ExceptionIsEmpty;
+import Actividad1.Stack;
 import Ejercicio1.StackLink;
 
 public class Application {
@@ -24,4 +25,9 @@ public class Application {
         return pila.isEmpty();
     }
     
+    private static boolean esPar(char apertura, char cierre) {
+        return (apertura == '(' && cierre == ')') ||
+               (apertura == '[' && cierre == ']') ||
+               (apertura == '{' && cierre == '}');
+    }
 }
